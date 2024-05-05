@@ -1,8 +1,8 @@
 package dev.app.artist.api.controller;
 
-import dev.app.music.api.dto.ApiResponse;
-import dev.app.music.api.entity.Artist;
-import dev.app.music.api.service.ArtistService;
+import dev.app.artist.api.dto.ApiResponse;
+import dev.app.artist.api.entity.Artist;
+import dev.app.artist.api.service.ArtistService;
 import java.util.List;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

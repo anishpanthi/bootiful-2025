@@ -1,8 +1,8 @@
 package dev.app.artist.api.service.impl;
 
-import dev.app.music.api.dto.ApiResponse;
-import dev.app.music.api.entity.Artist;
-import dev.app.music.api.service.ArtistService;
+import dev.app.artist.api.dto.ApiResponse;
+import dev.app.artist.api.entity.Artist;
+import dev.app.artist.api.service.ArtistService;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
