@@ -1,7 +1,7 @@
 package dev.app.artist.api.config;
 
-import dev.app.music.api.entity.Artist;
-import dev.app.music.api.service.ArtistService;
+import dev.app.artist.api.entity.Artist;
+import dev.app.artist.api.service.ArtistService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 

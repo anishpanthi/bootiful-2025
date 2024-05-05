@@ -1,7 +1,7 @@
 package dev.app.artist.api.service;
 
-import dev.app.music.api.dto.ApiResponse;
-import dev.app.music.api.entity.Artist;
+import dev.app.artist.api.dto.ApiResponse;
+import dev.app.artist.api.entity.Artist;
 import java.util.List;
 import java.util.Optional;
 
