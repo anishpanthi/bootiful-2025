@@ -4,6 +4,8 @@ import dev.app.artist.api.dto.ApiResponse;
 import dev.app.artist.api.entity.Artist;
 import dev.app.artist.api.service.ArtistService;
 import java.util.List;
+import org.springframework.security.oauth2.client.OAuth2AuthorizedClient;
+import org.springframework.security.oauth2.client.annotation.RegisteredOAuth2AuthorizedClient;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,6 +22,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/artists")
 public class ArtistController {
 
+  private static final String CLIENT_REGISTRATION_ID = "azure-entra";
+
   private final ArtistService artistService;
 
   public ArtistController(ArtistService artistService) {
@@ -32,7 +36,14 @@ public class ArtistController {
   }
 
   @GetMapping
-  public List<Artist> getArtists() {
+  public List<Artist> getArtists(
+      @RegisteredOAuth2AuthorizedClient(CLIENT_REGISTRATION_ID) OAuth2AuthorizedClient client) {
+    System.out.printf("Access Token: %s", client.getAccessToken().getTokenValue());
+    System.out.printf(
+        "%n%nRefresh Token: %s",
+        client.getRefreshToken() == null
+            ? "Refresh token not received"
+            : client.getRefreshToken().getTokenValue());
     return artistService.findAll();
   }
 
