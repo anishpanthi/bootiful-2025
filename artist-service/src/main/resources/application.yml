@@ -24,7 +24,7 @@ spring:
           azure-entra:
             provider: azure-entra
             client-id: 3e9eced8-0b9d-4027-99fe-f986994aba8b
-            client-secret: wxM8Q~SVxZnjHk._Xt480jiEf8pLbbKQHVIEcaWw
+            client-secret:
             client-name: Microsoft Entra ID (Azure AD)
             scope: openid, profile, email, offline_access
             redirect-uri: http://localhost:8080/login/oauth2/code/azuread
