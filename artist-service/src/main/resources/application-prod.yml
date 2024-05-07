@@ -25,6 +25,7 @@ spring:
             scope: openid, profile, email, offline_access
             redirect-uri: http://localhost:8080/login/oauth2/code/azuread
 
+
 management:
   endpoint:
     health:
@@ -42,3 +43,6 @@ management:
   tracing:
     sampling:
       probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: https://zipkin.railway.internal
