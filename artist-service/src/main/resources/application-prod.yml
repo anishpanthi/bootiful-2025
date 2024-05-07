@@ -3,9 +3,9 @@ spring:
     name: music-service
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/music
-    username: admin
-    password: admin
+    url: jdbc:postgresql://monorail.proxy.rlwy.net:54849/railway
+    username: postgres
+    password: iQMNbGTUfPfESkeIXrTwbUyfCXzaoIOe
   jpa:
     open-in-view: false
     properties:
